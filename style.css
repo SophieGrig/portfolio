@@ -1,0 +1,218 @@
+/* Basic Reset */
+body {
+    margin: 0;
+    padding: 0;
+    font-family: Arial, sans-serif;
+    background-color: #f9f9f9;
+    color: #333;
+  }
+  
+  
+  #circle-text-container {
+    position: absolute;
+    transform-origin: center;
+    width: 1px; /* Diameter of the circle */
+    height: 1px; /* Diameter of the circle */
+    pointer-events: none; /* Prevent interference with mouse events */
+    z-index: 1000; /* Make sure this is higher than other elements */
+  }
+  
+  spline-viewer {
+    position: absolute; /* Keeps it in place relative to the document */
+    bottom: 0; /* Aligns the bottom edge with the viewport */
+    left: 0; /* Aligns the left edge with the viewport */
+    width: 100vw; /* Full width of the viewport */
+    height: 80vh; /* Adjust to the desired height (e.g., 60% of viewport height) */
+    z-index: -1; /* Keeps it behind other content */
+    display: block;
+  }
+
+  .white-block {
+    position: absolute;
+    bottom: 0; /* Places it at the bottom of the page */
+    left: 0;
+    width: 100vw; /* Full width of the viewport */
+    height: 60px; /* Adjust the height as needed */
+    background-color: #f9f9f9; /* White background color */
+    z-index: 1; /* Places it above the Spline viewer */
+  }
+
+  .circle-char {
+    position: absolute;
+    font-size: 20px;
+    font-weight: bold;
+    color: #694368;
+    transform-origin: 0 100%; /* Align rotation to bottom center of each character */
+    z-index: inherit; /* Inherit z-index from the container */
+  }
+  
+  /* Center Content */
+  .container {
+    text-align: center;
+    padding-top: 20vh;
+  }
+  
+  /* Headline Styling */
+  h1 {
+    font-size: 3rem;
+    margin-bottom: 2rem;
+    color: #957394;
+  }
+  
+  /* Menu Styling */
+  .menu {
+    display: flex;
+    justify-content: center;
+    gap: 2rem;
+  }
+  
+  /* Dropdown Button */
+  .dropdown {
+    position: relative;
+  }
+  
+
+
+  .dropdown-button {
+    padding: 0.75rem 1.5rem;
+    font-size: 1rem;
+    color: #fff;
+    background-color: #aa70aa;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+    text-decoration: none;
+  }
+  
+  .dropdown-button:hover {
+    background-color: #835183;
+  }
+  
+  /* Dropdown Content */
+  .dropdown-content {
+    display: none;
+    position: absolute;
+    top: 100%;
+    left: 0;
+    background-color: #fff;
+    border: 1px solid #ddd;
+    border-radius: 5px;
+    box-shadow: 0px 4px 6px rgba(0, 0, 0, 0.1);
+    z-index: 1;
+  }
+  
+  .dropdown-content a {
+    display: block;
+    padding: 0.75rem 1.5rem;
+    color: #333;
+    text-decoration: none;
+    transition: background-color 0.3s ease;
+  }
+  
+  .dropdown-content a:hover {
+    background-color: #f0f0f0;
+  }
+  
+  /* Show Dropdown on Hover */
+  .dropdown:hover .dropdown-content {
+    display: block;
+  }
+  
+
+  /* Container Styles */
+.container {
+    max-width: 1600px;
+    margin: 2rem auto;
+    text-align: center;
+    font-family: Arial, sans-serif;
+  }
+  
+
+
+  .contents {
+    display: flex;
+    gap: 20px; /* Spacing between items */
+    justify-content: center; /* Center the content horizontally */
+    align-items: center; /* Align content vertically */
+    flex-wrap: wrap; /* Allow items to wrap if needed */
+    padding: 20px; /* Optional padding */
+    width: 100%; /* Take full width of the page */
+    max-width: 1300px; /* Ensure enough space for two 500px boxes with gap */
+    margin: 0 auto; /* Center the container on the page */
+    /*border: 2px dashed red;*/
+  }
+  
+  .video-box {
+    position: relative; /* Required for button positioning */
+    flex: 0 0 600px; /* Prevent shrinking, fixed width of 600px */
+    max-width: 600px; /* Ensure boxes don't exceed 600px */
+    margin: 1.5rem auto;
+    border-radius: 20px;
+    overflow: visible; /* Ensures the button is not clipped */
+    box-shadow: 0px 4px 6px rgba(0, 0, 0, 0.1);
+    /*border: 2px dashed blue;*/
+  }
+  
+  .video-box video {
+    width: 100%;
+    display: block;
+    border-radius: 20px;
+    /* Remove pointer-events */
+  }
+
+  .image-box {
+    position: relative; /* Required for button positioning */
+    flex: 0 0 600px; /* Prevent shrinking, fixed width of 600px */
+    max-width: 600px; /* Ensure boxes don't exceed 600px */
+    margin: 1.5rem auto;
+    border-radius: 20px;
+    overflow: visible; /* Ensures the button is not clipped */
+    /*border: 2px dashed blue;*/
+  }
+  
+  .image-box img {
+    width: 100%; /* Makes the image responsive */
+    border-radius: 20px; /* Matches the container's rounded corners */
+  }
+
+.view-button {
+  position: absolute;
+  bottom: -10px; /* Moves the button outside the video container */
+  left: 50%;
+  transform: translateX(-50%);
+  padding: 0.5rem 1rem;
+  background-color: #aa70aa; /* Semi-transparent black */
+  color: #fff;
+  text-decoration: none;
+  font-size: 1rem;
+  border-radius: 5px;
+  box-shadow: 0px 2px 4px rgba(0, 0, 0, 0.3);
+  z-index: 10; /* Ensure the button appears above the video */
+  transition: all 0.3s ease; /* Smooth transition for hover effects */
+}
+
+.view-button:hover {
+  background-color: #835183; /* White background */
+  color: #fff; /* Black text */
+}
+
+.top-left-button {
+  position: absolute;
+  top: 30px; /* Margin from the top */
+  left: 30px; /* Margin from the left */
+  z-index: 10; /* Ensures the button appears on top of the video */
+  padding: 20px 40px;
+  background-color: #aa70aa;
+  color: white;
+  border: none;
+  border-radius: 5px;
+  font-size: 1rem;
+  cursor: pointer;
+  box-shadow: 0px 4px 6px rgba(0, 0, 0, 0.2);
+  text-decoration: none;
+}
+
+.top-left-button:hover {
+  background-color: #835183;
+}
