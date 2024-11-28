@@ -1,0 +1,38 @@
+body {
+    margin: 0;
+    font-family: Arial, sans-serif;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    height: 100vh;
+    background-color: #f9f9f9; /* Optional background color */
+  }
+
+  .spline-container {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    position: relative;
+    transform: translateY(- 20%); /* Adjusts the vertical position */
+    width: 100%;
+  }
+
+  spline-viewer {
+    width: 100vw; /* Adjust width */
+    height: 70vh; /* Adjust height */
+    display: block;
+    z-index: 0; /* Background layer */
+  }
+
+  .white-block {
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    width: 100%; /* Full width */
+    height: 250px; /* Adjust height as needed */
+    background-color: #f9f9f9; /* White background */
+    z-index: 1; /* Layer above Spline */
+  }
+

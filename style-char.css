@@ -1,0 +1,12 @@
+h1 {
+    font-size: 3rem;
+    color: #957394;
+    z-index: 2; /* Layer above Spline */
+
+  }
+
+  p {
+    font-size: 1.3rem;
+    color: #957394;
+    z-index: 2; /* Layer above Spline */
+  }
